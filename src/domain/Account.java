@@ -18,16 +18,8 @@ public class Account {
         return number;
     }
 
-    public void setNumber(long number) {
-        this.number = number;
-    }
-
     public Customer getCustomerInfo() {
         return customerInfo;
-    }
-
-    public void setCustomerInfo(Customer customerInfo) {
-        this.customerInfo = customerInfo;
     }
 
     public BigDecimal getBalance() {
