@@ -1,19 +1,36 @@
 package domain;
 
-public class Customer extends Person {
+public class Customer {
 
-    private long identificationType;
+    private String name;
+    private String lastName;
+    private long age;
+    private IdentificationType identificationType;
     private String identification;
-    private String identificationDescription;
+    private CustomerType customerType;
 
-    public Customer(String name, String lastName, int age, long identificationType, String identification, String identificationDescription) {
-        super(name, lastName, age);
+    public Customer(String name, String lastName, long age, IdentificationType identificationType, String identification, CustomerType customerType) {
+        this.name = name;
+        this.lastName = lastName;
+        this.age = age;
         this.identificationType = identificationType;
         this.identification = identification;
-        this.identificationDescription = identificationDescription;
+        this.customerType = customerType;
     }
 
-    public long getIdentificationType() {
+    public String getName() {
+        return name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public long getAge() {
+        return age;
+    }
+
+    public IdentificationType getIdentificationType() {
         return identificationType;
     }
 
@@ -21,7 +38,19 @@ public class Customer extends Person {
         return identification;
     }
 
-    public String getIdentificationDescription() {
-        return identificationDescription;
+    public CustomerType getCustomerType() {
+        return customerType;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", identificationType=" + identificationType +
+                ", identification='" + identification + '\'' +
+                ", customerType=" + customerType +
+                '}';
     }
 }
